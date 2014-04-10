@@ -1,0 +1,6 @@
+[submodule "CUSS"]
+	path = CUSS
+	url = https://github.com/MD4/CUSS.git
+[submodule "WC"]
+	path = WC
+	url = https://github.com/MD4/WC

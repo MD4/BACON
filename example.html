@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>BACON example</title>
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="CUSS/Cuss.js"></script>
+		<script src="WC/Wc.js"></script>
+		<script src="Bacon.js"></script>
+	</head>
+	<body>
+		<script>
+			var backgroundsURLs = [
+				'http://2.bp.blogspot.com/-eS2DmEidr0c/TwT4LsZFG3I/AAAAAAAABbk/q-LbZsN3hAs/s1600/IMG_2747.JPG',
+				'http://www.candyindustry.com/ext/resources/images/April-2013-EVERYDAY/Bacon.jpg',
+				'http://i.imgur.com/V2dtI.jpg'
+			];
+			var bacon = new Bacon(backgroundsURLs, window.body, 3000, complete, progress, 'swing');
+			
+			function progress(completed, overall) {
+				$('#loadingDiv').html('Loading : ' + completed + '/' + overall);
+			}
+			
+			function complete() {
+				$('#loadingDiv').hide();
+				bacon.start();
+			}
+		</script>
+		
+		<div id="loadingDiv">Loading : 0/3</div>
+	</body>
+</html>
